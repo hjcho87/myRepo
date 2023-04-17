@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Miraecity SBA Robot</title>
-    <link href="{{ url_for('static', path='/css/styles.css') }}" rel="stylesheet">
-    <link id="favicon" rel="icon" type="image/x-icon" href="/home/soc/catkin_ws/src/sba_robot_pkg/src/static/logo.ico">
+    <link href="static/css/styles.css" rel="stylesheet">
+    <link id="favicon" rel="icon" type="image/x-icon" href="/static/logo.ico">
 </head>
 <body style="background-color:#ffffff;">
     <div id="control">
@@ -68,8 +68,8 @@
             <button id="btn_led" class="custom-btn btn-5" style="font-size:18px;" onclick=Robot_LedController()><span>적 용</span></button>
         </p>
 <!--        <h1>📷 Robot Cam</h1>-->
-        <img style="display: block; margin-left:auto; margin-right:auto;" src="http://192.168.70.194:5005/stream" width="480" height="320" onclick=openImage()>
-<!--        <img style="display: block; margin-left:auto; margin-right:auto;" src="http://218.54.201.186:5005/stream" width="480" height="320" onclick=openImage()>-->
+        <!-- <img style="display: block; margin-left:auto; margin-right:auto;" src="http://192.168.70.194:5005/stream" width="480" height="320" onclick=openImage()> -->
+       <img style="display: block; margin-left:auto; margin-right:auto;" src="http://218.54.201.186:5005/stream" width="480" height="320" onclick=openImage()>
 
         <p>✔ PTZ 속 도
         <select id='ptz_speed' style="font-size:25px;">
@@ -92,8 +92,8 @@
     <button id="btn_logout" class="custom-btn btn-2" style="color:black; font-weight:bold; margin-left: 70%" onclick=Logout()><span>Logout</span></button>
     <script>
         const request = new XMLHttpRequest();
-        // const url = "http://218.54.201.186:5005/";
-        const url = "http://192.168.70.194:5005/";
+        const url = "http://218.54.201.186:5005/";
+        // const url = "http://192.168.70.194:5005/";
         let target_position = 50;
         let robot_status = {};
         const status_path = "status";
